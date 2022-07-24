@@ -4,7 +4,7 @@ var screenH = window.innerHeight;
 canvas.width = screenW
 canvas.height = screenH;
 var ctx = canvas.getContext("2d")
-
+var gravity = 2;
 function Ball(x, y, dx, dy, radius, color) {
     this.x = x;
     this.y = y;
@@ -25,7 +25,7 @@ function Ball(x, y, dx, dy, radius, color) {
         if(this.y + this.radius + this.dy > canvas.height) {
             this.dy = -this.dy * 0.99;
         } else {
-            this.dy += 2;
+            this.dy += gravity;
         }
         console.log(this.dy)
         this.y += this.dy;
