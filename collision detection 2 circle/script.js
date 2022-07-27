@@ -45,12 +45,7 @@ function animate() {
     
     ctx.clearRect(0,0, screenW, screenH)
     circle2.update();
-    if(getDistance(circle1.x, circle1.y, circle2.x, circle2.y) < circle1.radius + circle2.radius) {
-        circle1.color = 'red';
-    } else {
-        circle1.color = 'black'
-    }
-
+    
     circle1.update();
 
     requestAnimationFrame(animate);
